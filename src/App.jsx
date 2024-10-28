@@ -1,15 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import gsap from "gsap";
 import "./App.css";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div></div>
-    </>
+    <div className="flex flex-col w-auto justify-center items-center">
+      <Navbar />
+      <Hero />
+    </div>
   );
 }
 
